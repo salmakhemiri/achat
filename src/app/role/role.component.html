@@ -1,0 +1,67 @@
+<h3>Add Role</h3>
+<div class="container">
+    <form #f="ngForm">
+        <p></p>
+        <div class="form-group">
+            <label>Nom</label>
+            <input type="text" name="nom" class="form-control" [(ngModel)]="role.nom" #n="ngModel" required minlength="3">
+            <div class="alert alert-danger" *ngIf="n.invalid && n.touched">
+            <div *ngIf="n.errors?.['required']"> 
+                le nom est obligatoire
+            </div>
+            <div *ngIf="n.errors?.['minlength']">
+                le nom contient au minimum 3 caractères
+            </div>
+          </div>
+        </div>
+        <p></p>
+        <div class="form-group">
+            <label>prenom</label>
+            <input type="text" name="prenom" class="form-control" [(ngModel)]="role.prenom" #p="ngModel" required> 
+            <div class="alert alert-danger" *ngIf="p.invalid && p.touched">
+            le prenom est obligatoire
+          </div>
+         
+        </div>
+        <p></p>
+        <div class="form-group">
+            <label>password</label>
+            <input type="text" name="password" class="form-control" [(ngModel)]="role.password" #ps="ngModel" required>
+          <div class="alert alert-danger" *ngIf="ps.invalid && ps.touched">
+            le password est obligatoire
+          </div>
+        </div>
+          <p></p>
+        <button class="btn btn-warning" [disabled]="f.invalid" (click)="save()">
+            save
+        </button>
+     
+    </form>
+    <h3>Roles List</h3>
+<table class="table" border="1" >
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Password</th>
+    </tr>
+</thead>
+    <tbody *ngFor="let role of listRole">
+
+        <th scope="row"> {{role.id}}</th>
+        <td> {{role.nom}}</td>
+        <td> {{role.prenom}}</td>
+        <td> {{role.password}}</td>
+        <td> 
+            <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteRole(role.id)">
+                Delete
+            </button>
+        </td>
+        <td> <button type="button" routerLink="/form/{{role.id}}"  class="btn btn-outline-warning btn-sm">
+            Edit
+            </button>
+        </td>
+</tbody>
+</table>
+</div>

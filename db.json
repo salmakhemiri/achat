@@ -1,0 +1,22 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "nom": "aicha",
+      "prenom": "gasri",
+      "password": "typicode"
+    },
+    {
+      "id": 2,
+      "nom": "salma",
+      "prenom": "khemri",
+      "password": "aloaloalo"
+    },
+    {
+      "id": 3,
+      "nom": "farouk",
+      "prenom": "douiri",
+      "password": "fifiabdou"
+    }
+  ]
+}
