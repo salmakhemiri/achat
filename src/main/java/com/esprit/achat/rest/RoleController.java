@@ -1,4 +1,4 @@
-package RestController;
+package com.esprit.achat.rest;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;

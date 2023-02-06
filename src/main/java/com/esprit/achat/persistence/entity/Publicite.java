@@ -1,4 +1,6 @@
-package Entity;
+package com.esprit.achat.persistence.entity;
+import com.esprit.achat.persistence.enumeration.Methode;
+import com.esprit.achat.persistence.enumeration.Status;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

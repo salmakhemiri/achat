@@ -1,5 +1,6 @@
-package Entity;
+package com.esprit.achat.persistence.entity;
 
+import com.esprit.achat.persistence.enumeration.type;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,25 +8,32 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
-public class Commentaire implements Serializable {
+
+public class Reclamation implements Serializable {
+
     /**
      *
      */
     private static final long serialVersionUID = 1L;
-
     @Id
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String description;
-    private long like;
-    private String emoji;
+    @Temporal(TemporalType.DATE)
+    private Date date;
     @Enumerated(EnumType.STRING)
-    private MotInterdit motinterdit;
+    private type Type;
     @ManyToOne
-    User appuser;
+    User acheteur;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "reclamations")
+    private List<Rating> rating;
+
 }

@@ -1,5 +1,4 @@
-package Entity;
-
+package com.esprit.achat.persistence.entity;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,22 +9,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.io.Serializable;
+
 @Getter
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
-
-public class Chat implements Serializable {
-    /**
-     *
-     */
-    private static final long serialVersionUID = 1L;
+public class Rating implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String message;
-    private String reponse;
+    private float rate;
     @ManyToOne
-    User appuser;
+    Reclamation reclamation;
 
 }

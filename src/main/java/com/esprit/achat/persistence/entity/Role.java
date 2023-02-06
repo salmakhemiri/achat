@@ -1,11 +1,13 @@
-package Entity;
+package com.esprit.achat.persistence.entity;
 
+import com.esprit.achat.persistence.enumeration.ERole;
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 
+@Entity
 @ToString
 @Getter
 @Setter

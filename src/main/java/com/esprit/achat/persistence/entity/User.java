@@ -1,4 +1,4 @@
-package Entity;
+package com.esprit.achat.persistence.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -9,7 +9,8 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-
+@Entity
+@Table(name = "utilisateurs")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -74,6 +75,7 @@ public class User implements Serializable {
         this.idUser=id;
     }
     //------------------------Salma-------------------------------
+    /*
    @OneToMany(cascade = CascadeType.ALL, mappedBy = "acheteur")
    private List<Reclamation> reclamation;
    @ManyToMany(mappedBy = "appuser", cascade = CascadeType.ALL)
@@ -86,5 +88,5 @@ public class User implements Serializable {
     private List<Commentaire> commentaire;
     @JsonIgnore
     @OneToMany (cascade=CascadeType.ALL, fetch=FetchType.EAGER,mappedBy = "user")
-    private List<Historique> searchs;
+    private List<Historique> searchs;*/
 }

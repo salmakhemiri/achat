@@ -1,7 +1,7 @@
-package Services;
+package com.esprit.achat.services;
 
-import Entity.Role;
-import Repositories.RoleRepository;
+import com.esprit.achat.persistence.entity.Role;
+import com.esprit.achat.repositories.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class RoleServiceIMP extends GenericServiceIMP<Role,Integer> implements RoleService{

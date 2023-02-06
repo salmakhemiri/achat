@@ -1,4 +1,4 @@
-package Entity;
+package com.esprit.achat.persistence.entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
