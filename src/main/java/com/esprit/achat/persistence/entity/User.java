@@ -8,9 +8,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
-@Table(name = "utilisateurs")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -21,7 +21,7 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long idUser;
+    private Integer idUser;
 
     @NonNull
     private String firstName;
@@ -64,19 +64,27 @@ public class User implements Serializable {
     private Integer age;
     @Column(name = "resettoken")
     private String resettoken;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @ToString.Exclude
+    @JsonIgnore
+    private List<Role> roles  ;
 
-
+/*
     public boolean isEnabled() {
         return enabled;
     }
     //-----------------userDetails--------------------------
 
-    public User(long id) {
+    public User(Integer id) {
         this.idUser=id;
     }
-    //------------------------Salma-------------------------------
-    /*
-   @OneToMany(cascade = CascadeType.ALL, mappedBy = "acheteur")
+
+
+
+
+
+
+   @OneToMany(cascade = CascadeType.ALL, mappedBy = "appuser")
    private List<Reclamation> reclamation;
    @ManyToMany(mappedBy = "appuser", cascade = CascadeType.ALL)
     private List<Publicite> publicite;
@@ -87,6 +95,8 @@ public class User implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "appuser")
     private List<Commentaire> commentaire;
     @JsonIgnore
-    @OneToMany (cascade=CascadeType.ALL, fetch=FetchType.EAGER,mappedBy = "user")
-    private List<Historique> searchs;*/
+    @OneToMany (cascade=CascadeType.ALL, fetch=FetchType.EAGER,mappedBy = "appuser")
+    private List<Historique> searchs;
+
+ */
 }

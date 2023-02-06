@@ -11,6 +11,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+@Entity
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -25,15 +26,18 @@ public class Reclamation implements Serializable {
     @Id
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Integer id;
     private String description;
     @Temporal(TemporalType.DATE)
     private Date date;
     @Enumerated(EnumType.STRING)
     private type Type;
+    /*
     @ManyToOne
     User acheteur;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "reclamations")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "appuser")
     private List<Rating> rating;
+
+     */
 
 }

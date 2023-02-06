@@ -1,16 +1,23 @@
 package com.esprit.achat.persistence.entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import java.io.Serializable;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.*;
+import java.io.Serializable;
+@Entity
+@Getter
+@Setter
+@EqualsAndHashCode
+@NoArgsConstructor
 public class Reaction implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long idReaction;
     private String react;
+    /*
     @ManyToOne
     private Commentaire commentaire;
     @ManyToOne
@@ -72,5 +79,7 @@ public class Reaction implements Serializable {
     }
 
 
+
+     */
 
 }

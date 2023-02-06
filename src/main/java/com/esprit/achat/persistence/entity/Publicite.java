@@ -9,7 +9,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-
+@Entity
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -21,7 +21,7 @@ public class Publicite  implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Integer id;
     private String titre;
     @Temporal(TemporalType.DATE)
     private Date dateDebut;
@@ -39,8 +39,11 @@ public class Publicite  implements Serializable {
 
     @Enumerated(EnumType.STRING)
     private Status status;
+    /*
     @ManyToOne
     User appuser;
+
+     */
 
 
 

@@ -1,4 +1,5 @@
 package com.esprit.achat.persistence.entity;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -8,11 +9,9 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
-
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,7 +22,13 @@ import java.io.Serializable;
 public class Reponse implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idR;
+    private Integer idR;
     private String textR;
+    /*
+    @ManyToOne
+    @JsonManagedReference
+    private Question question;
+
+     */
 }
 

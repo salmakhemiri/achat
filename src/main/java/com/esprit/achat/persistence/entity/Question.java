@@ -14,7 +14,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
-
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
@@ -26,10 +26,13 @@ import java.util.Set;
 public class Question implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idQ;
+    private Integer idQ;
     private String textQ;
+    /*
     @OneToMany(cascade = CascadeType.PERSIST,fetch = FetchType.EAGER)
     @JsonManagedReference
     private Set<Response> responses;
+
+     */
 
 }
