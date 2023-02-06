@@ -14,11 +14,11 @@ import java.io.Serializable;
 public class Role implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int id;
-    private String prenom;
-    private String nom;
-    private String password;
+    private Integer id;
+
     @Enumerated(EnumType.STRING)
-    private Fonction fonction;
+    @Column(length = 20)
+    private ERole name;
+
 
 }
