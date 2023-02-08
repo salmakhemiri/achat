@@ -1,9 +1,7 @@
 package com.esprit.achat.rest;
 
 import com.esprit.achat.persistence.entity.Question;
-import com.esprit.achat.persistence.entity.Role;
-import com.esprit.achat.services.QuestionService;
-import com.esprit.achat.services.RoleService;
+import com.esprit.achat.services.Interface.QuestionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

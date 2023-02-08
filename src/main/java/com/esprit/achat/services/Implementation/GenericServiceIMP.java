@@ -1,11 +1,11 @@
-package com.esprit.achat.services;
+package com.esprit.achat.services.Implementation;
 import com.esprit.achat.repositories.GenericRepository;
+import com.esprit.achat.services.Interface.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public class GenericServiceIMP <T,ID> implements GenericService<T,ID> {
 
     @Autowired

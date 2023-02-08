@@ -1,4 +1,4 @@
-package com.esprit.achat.services;
+package com.esprit.achat.services.Interface;
 
 import java.util.List;
 

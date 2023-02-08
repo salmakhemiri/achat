@@ -4,6 +4,6 @@ import com.esprit.achat.persistence.entity.Rating;
 import com.esprit.achat.persistence.entity.Reponse;
 import org.springframework.stereotype.Repository;
 
-@Repository
+
 public interface RatingRepository extends GenericRepository<Rating, Integer>{
 }

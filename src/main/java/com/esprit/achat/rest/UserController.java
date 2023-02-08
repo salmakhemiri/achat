@@ -1,9 +1,7 @@
 package com.esprit.achat.rest;
 
-import com.esprit.achat.persistence.entity.Role;
 import com.esprit.achat.persistence.entity.User;
-import com.esprit.achat.services.RoleService;
-import com.esprit.achat.services.UserService;
+import com.esprit.achat.services.Interface.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
