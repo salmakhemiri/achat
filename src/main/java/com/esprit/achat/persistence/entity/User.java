@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-@org.hibernate.annotations.Entity
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
@@ -65,13 +65,13 @@ public class User implements Serializable {
 
    /* @Column(name = "resettoken")
     private String resettoken*/
+    /*
     @ManyToMany(cascade = CascadeType.ALL)
-
     @ToString.Exclude
     @JsonIgnore
     private List<Role> roles;
 
-/*
+
     public boolean isEnabled() {
         return enabled;
     }

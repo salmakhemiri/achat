@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
-import org.apache.coyote.Response;
-import org.hibernate.annotations.Entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -23,8 +21,6 @@ import java.util.Set;
 @EqualsAndHashCode
 @ToString
 @FieldDefaults(level=AccessLevel.PRIVATE)
-
-
 public class Question implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

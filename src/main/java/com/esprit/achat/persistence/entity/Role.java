@@ -24,10 +24,11 @@ public class Role implements Serializable {
     @Column(length = 20)
     private ERole name;
 
+    /*
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "roles")
     @ToString.Exclude
     @JsonIgnore
-    private Set<User> users;
+    private Set<User> users;*/
 
 
 }
