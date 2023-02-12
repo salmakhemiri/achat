@@ -32,12 +32,6 @@ public class Reclamation implements Serializable {
     private Date date;
     @Enumerated(EnumType.STRING)
     private ReclamationType reclamationType;
-    /*
-    @ManyToOne
-    User acheteur;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "appuser")
-    private List<Rating> rating;
 
-     */
 
 }

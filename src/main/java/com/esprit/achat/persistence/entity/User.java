@@ -63,42 +63,5 @@ public class User implements Serializable {
     @NonNull
     private Integer age;
 
-   /* @Column(name = "resettoken")
-    private String resettoken*/
-    /*
-    @ManyToMany(cascade = CascadeType.ALL)
-    @ToString.Exclude
-    @JsonIgnore
-    private List<Role> roles;
 
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-    //-----------------userDetails--------------------------
-
-    public User(Integer id) {
-        this.idUser=id;
-    }
-
-
-
-
-
-
-   @OneToMany(cascade = CascadeType.ALL, mappedBy = "appuser")
-   private List<Reclamation> reclamation;
-   @ManyToMany(mappedBy = "appuser", cascade = CascadeType.ALL)
-    private List<Publicite> publicite;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "appuser")
-    private List<Chat> chat;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "appuser")
-    private List<Reclamation> reclamations;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "appuser")
-    private List<Commentaire> commentaire;
-    @JsonIgnore
-    @OneToMany (cascade=CascadeType.ALL, fetch=FetchType.EAGER,mappedBy = "appuser")
-    private List<Historique> searchs;
-
- */
 }

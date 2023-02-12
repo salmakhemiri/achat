@@ -23,11 +23,6 @@ public class Reponse implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idR;
     private String textR;
-    /*
-    @ManyToOne
-    @JsonManagedReference
-    private Question question;
 
-     */
 }
 

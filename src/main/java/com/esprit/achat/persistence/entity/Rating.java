@@ -17,10 +17,6 @@ public class Rating implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Float rate;
-    /*
-    @ManyToOne
-    Reclamation reclamation;
 
-     */
 
 }

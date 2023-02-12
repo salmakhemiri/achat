@@ -26,11 +26,6 @@ public class Question implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idQ;
     private String textQ;
-    /*
-    @OneToMany(cascade = CascadeType.PERSIST,fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private Set<Response> responses;
 
-     */
 
 }
