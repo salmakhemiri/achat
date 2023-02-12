@@ -6,7 +6,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@RequestMapping("user")
+@RestController
+@RequestMapping("/user")
 @AllArgsConstructor
 public class UserController {
     private UserService userService;

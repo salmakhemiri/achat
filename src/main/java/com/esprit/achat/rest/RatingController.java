@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("rating")
+@RestController
+@RequestMapping("/rating")
 @AllArgsConstructor
 public class RatingController {
     private RatingService ratingService;

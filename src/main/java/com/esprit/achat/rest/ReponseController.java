@@ -6,8 +6,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-@RequestMapping("reponse")
+@RestController
+@RequestMapping("/reponse")
 @AllArgsConstructor
 public class ReponseController {
     private ReponseService reponseService;

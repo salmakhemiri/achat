@@ -1,5 +1,5 @@
 package com.esprit.achat.services.Implementation;
-import com.esprit.achat.repositories.GenericRepository;
+import com.esprit.achat.repositories.MyGenericRepository;
 import com.esprit.achat.services.Interface.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -9,12 +9,12 @@ import java.util.List;
 public class GenericServiceIMP <T,ID> implements GenericService<T,ID> {
 
     @Autowired
-    public GenericRepository<T,ID> genericRepository ;
+    public MyGenericRepository<T,ID> myGenericRepository;
 
     @Override
     public List<T> retrieveAll() {
         try{
-            return  genericRepository.findAll();
+            return  myGenericRepository.findAll();
         } catch (Exception err) {
             System.out.println("Un erreur est survenue : " + err);
         }
@@ -24,7 +24,7 @@ public class GenericServiceIMP <T,ID> implements GenericService<T,ID> {
     @Override
     public void add(T t) {
         try{
-            genericRepository.save(t);
+            myGenericRepository.save(t);
         } catch (Exception err) {
             System.out.println("Un erreur est survenue : " + err);
         }
@@ -35,7 +35,7 @@ public class GenericServiceIMP <T,ID> implements GenericService<T,ID> {
     public void update(T t) {
         try {
             System.out.println("mise a jour avec succes");
-            genericRepository.save(t);
+            myGenericRepository.save(t);
         } catch (Exception err) {
             System.out.println("Un erreur est survenue : " + err);
         }
@@ -45,8 +45,8 @@ public class GenericServiceIMP <T,ID> implements GenericService<T,ID> {
     @Override
     public void remove(ID id) {
         try{
-            T t = genericRepository.findById(id).orElse(null);
-            genericRepository.delete(t);
+            T t = myGenericRepository.findById(id).orElse(null);
+            myGenericRepository.delete(t);
         } catch (Exception err) {
             System.out.println("Un erreur est survenue : " + err);
         }
@@ -55,7 +55,7 @@ public class GenericServiceIMP <T,ID> implements GenericService<T,ID> {
     @Override
     public T retrieve(ID id) {
         try{
-            return  genericRepository.findById(id).get();
+            return  myGenericRepository.findById(id).get();
         } catch (Exception err) {
             System.out.println("Un erreur est survenue : " + err);
         }

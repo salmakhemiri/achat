@@ -6,8 +6,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-@RequestMapping("reclamation")
+@RestController
+@RequestMapping("/reclamation")
 @AllArgsConstructor
 public class ReclamationController {
     private ReclamationService reclamationService;

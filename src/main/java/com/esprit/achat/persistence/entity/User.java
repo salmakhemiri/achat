@@ -20,7 +20,7 @@ public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idUser;
 
     @NonNull
@@ -28,7 +28,7 @@ public class User implements Serializable {
     @NonNull
     private String lastName;
     @NonNull
-    @Column(unique=true)
+    @Column(unique = true)
     private String userName;
     @NonNull
     private String email;
@@ -56,18 +56,20 @@ public class User implements Serializable {
     private Date deletedAt;
 
 
-
     @Temporal(TemporalType.DATE)
     @Transient
     private Date birthDate;
+
     @NonNull
     private Integer age;
+
     @Column(name = "resettoken")
     private String resettoken;
     @ManyToMany(cascade = CascadeType.ALL)
+
     @ToString.Exclude
     @JsonIgnore
-    private List<Role> roles  ;
+    private List<Role> roles;
 
 /*
     public boolean isEnabled() {
