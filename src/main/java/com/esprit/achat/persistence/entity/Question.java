@@ -19,7 +19,11 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
+@AllArgsConstructor
+@EqualsAndHashCode
+@ToString
+@FieldDefaults(level=AccessLevel.PRIVATE)
+
 
 public class Question implements Serializable {
     @Id

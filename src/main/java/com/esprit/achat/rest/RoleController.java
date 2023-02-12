@@ -24,11 +24,11 @@ public class RoleController {
     void update(Role r){
         roleService.update(r);
     }
-    @DeleteMapping("/delete/{idRole}")
+    @DeleteMapping("/delete/{id}")
     void remove(Integer id){
         roleService.remove(id);
     }
-    @GetMapping("/{idRole}")
+    @GetMapping("/{id}")
     Role retrieve(Integer id){
         return roleService.retrieve(id);
     }

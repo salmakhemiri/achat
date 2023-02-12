@@ -3,7 +3,6 @@ package com.esprit.achat.persistence.entity;
 import com.esprit.achat.persistence.enumeration.ERole;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
-import org.hibernate.annotations.Entity;
 
 import javax.persistence.*;
 import java.io.Serializable;

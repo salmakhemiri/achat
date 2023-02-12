@@ -26,12 +26,12 @@ public class UserController {
 
         userService.update(u);
     }
-    @DeleteMapping("/delete/{idUser}")
+    @DeleteMapping("/delete/{id}")
     void remove(Integer id){
 
         userService.remove(id);
     }
-    @GetMapping("/{idUser}")
+    @GetMapping("/{id}")
     User retrieve(Integer id){
 
         return userService.retrieve(id);

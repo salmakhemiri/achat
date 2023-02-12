@@ -25,12 +25,12 @@ public class ReclamationController {
 
         reclamationService.update(r);
     }
-    @DeleteMapping("/delete/{idReclamation}")
+    @DeleteMapping("/delete/{id}")
     void remove(Integer id){
 
         reclamationService.remove(id);
     }
-    @GetMapping("/{idReclamation}")
+    @GetMapping("/{id}")
     Reclamation retrieve(Integer id){
 
         return reclamationService.retrieve(id);

@@ -29,12 +29,12 @@ public class QuestionController {
         questionService.update(q);
     }
 
-    @DeleteMapping("/delete/{idQuestion}")
+    @DeleteMapping("/delete/{id}")
     void remove(Integer id){
         questionService.remove(id);
     }
 
-    @GetMapping("/{idQuestion}")
+    @GetMapping("/{id}")
     Question retrieve(Integer id){
         return questionService.retrieve(id);
     }

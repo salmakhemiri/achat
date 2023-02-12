@@ -23,11 +23,11 @@ public class ReponseController {
     void update(Reponse r){
         reponseService.update(r);
     }
-    @DeleteMapping("/delete/{idReponse}")
+    @DeleteMapping("/delete/{id}")
     void remove(Integer id){
         reponseService.remove(id);
     }
-    @GetMapping("/{idReponse}")
+    @GetMapping("/{id}")
     Reponse retrieve(Integer id){
         return reponseService.retrieve(id);
     }

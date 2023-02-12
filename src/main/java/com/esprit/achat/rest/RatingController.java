@@ -26,12 +26,12 @@ public class RatingController {
 
         ratingService.update(r);
     }
-    @DeleteMapping("/delete/{idRating}")
+    @DeleteMapping("/delete/{id}")
     void remove(Integer id){
 
         ratingService.remove(id);
     }
-    @GetMapping("/{idRating}")
+    @GetMapping("/{id}")
     Rating retrieve(Integer id){
 
         return ratingService.retrieve(id);
