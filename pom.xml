@@ -12,7 +12,7 @@
 	<artifactId>achat</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>achat</name>
-	<description>Projet de gestion d&apos;achat</description>
+	<description>Projet de gestion dachat</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

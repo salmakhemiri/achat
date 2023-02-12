@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-@Entity
+@org.hibernate.annotations.Entity
 @Getter
 @Setter
 @AllArgsConstructor
@@ -63,8 +63,8 @@ public class User implements Serializable {
     @NonNull
     private Integer age;
 
-    @Column(name = "resettoken")
-    private String resettoken;
+   /* @Column(name = "resettoken")
+    private String resettoken*/
     @ManyToMany(cascade = CascadeType.ALL)
 
     @ToString.Exclude

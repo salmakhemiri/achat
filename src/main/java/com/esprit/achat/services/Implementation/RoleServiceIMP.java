@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RoleServiceIMP extends GenericServiceIMP<Role,Integer> implements RoleService {
+public class RoleServiceIMP extends CrudServiceIMP<Role,Integer> implements RoleService {
     @Autowired
     RoleRepositoryMy roleRepository;
 }

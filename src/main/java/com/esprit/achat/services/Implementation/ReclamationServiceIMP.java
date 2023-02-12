@@ -5,5 +5,5 @@ import com.esprit.achat.services.Interface.ReclamationService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ReclamationServiceIMP extends GenericServiceIMP<Reclamation,Integer> implements ReclamationService {
+public class ReclamationServiceIMP extends CrudServiceIMP<Reclamation,Integer> implements ReclamationService {
 }

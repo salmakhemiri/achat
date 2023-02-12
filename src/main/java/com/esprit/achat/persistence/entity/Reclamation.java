@@ -1,6 +1,6 @@
 package com.esprit.achat.persistence.entity;
 
-import com.esprit.achat.persistence.enumeration.type;
+import com.esprit.achat.persistence.enumeration.ReclamationType;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +9,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
+
 
 @Entity
 @Getter
@@ -31,7 +31,7 @@ public class Reclamation implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date date;
     @Enumerated(EnumType.STRING)
-    private type Type;
+    private ReclamationType reclamationType;
     /*
     @ManyToOne
     User acheteur;

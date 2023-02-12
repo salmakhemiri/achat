@@ -5,5 +5,5 @@ import com.esprit.achat.services.Interface.ReponseService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ReponseServiceIMP extends GenericServiceIMP<Reponse,Integer> implements ReponseService {
+public class ReponseServiceIMP extends CrudServiceIMP<Reponse,Integer> implements ReponseService {
 }

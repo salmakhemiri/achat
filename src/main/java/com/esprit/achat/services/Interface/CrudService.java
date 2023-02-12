@@ -2,7 +2,7 @@ package com.esprit.achat.services.Interface;
 
 import java.util.List;
 
-public interface GenericService <T,ID>{
+public interface CrudService<T,ID>{
     List<T> retrieveAll();
     void add(T t);
     void update(T t);

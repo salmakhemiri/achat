@@ -5,5 +5,5 @@ import com.esprit.achat.services.Interface.QuestionService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class QuestionServiceIMP extends GenericServiceIMP<Question,Integer> implements QuestionService {
+public class QuestionServiceIMP extends CrudServiceIMP<Question,Integer> implements QuestionService {
 }
